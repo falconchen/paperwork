@@ -8,7 +8,25 @@
 @include('modal/manageNotebooks')
 
 <div class="container-fluid">
+	<!--<div class="row" style="margin-bottom:10px;position:fixed;width:100%;height:30px;z-index:1">
+	    <div style="text-align:center;background-color:red;color:#FFFFFF;height:30px;">
+	        <p>This is an error message. </p>
+	    </div>
+	</div>-->
+	<script type="text/javascript">
+	    var toggle = function() { 
+	        var i = document.getElementsByClassName("sidebar"); 
+	        for(var j = 0; j < i.length; j++) { 
+	            i[j].style.marginTop += '30px'; 
+	        }; 
+	        document.getElementById("paperworkView").style.marginTop += '30px'; 
+	        document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += '30px'; 
+	    };
+	</script>
 	<div class="row">
+	    <div style="text-align:center;background-color:red;color:#FFFFFF;height:30px;">
+	        <p>This is an error message. </p>
+	    </div>
         <div class="fa sidebar-collapse-switch" ng-show="!expandedNoteLayout"
              ng-class="sidebarCollapsed ? 'fa-chevron-right sidebar-collapse-switch-closed' : 'fa-chevron-left col-sm-offset-3 col-md-offset-2'"
              ng-click="sidebarCollapsed = !sidebarCollapsed" ng-init="sidebarCollapsed = false"></div>
