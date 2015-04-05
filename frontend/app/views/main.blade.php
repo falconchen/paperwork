@@ -50,8 +50,8 @@
 	    //};
 	</script>
 	<div class="row">
-	    <div id="test" style="text-align:center;background-color:red;color:#FFFFFF;position:fixed;width:100%;z-index:1;">
-	        <p>This is an error message. </p>
+	    <div id="test" style="text-align:center;background-color:red;color:#FFFFFF;position:fixed;width:100%;z-index:1;padding:10px 0">
+	        <p>This is an error message. <br><br><br>Hello again. </p>
 	    </div>
         <div class="fa sidebar-collapse-switch" ng-show="!expandedNoteLayout"
              ng-class="sidebarCollapsed ? 'fa-chevron-right sidebar-collapse-switch-closed' : 'fa-chevron-left col-sm-offset-3 col-md-offset-2'"
