@@ -14,17 +14,43 @@
 	    </div>
 	</div>-->
 	<script type="text/javascript">
-	    var toggle = function() { 
-	        var i = document.getElementsByClassName("sidebar"); 
-	        for(var j = 0; j < i.length; j++) { 
-	            i[j].style.marginTop += '30px'; 
-	        }; 
-	        document.getElementById("paperworkView").style.marginTop += '30px'; 
-	        document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += '30px'; 
-	    };
+	    //window.onload = function() {
+	        var toggleOn = function() { 
+	            var divHeight = document.getElementById("test").offsetHeight;
+	            divHeight += "px";
+	            console.log(divHeight);
+	            var i = document.getElementsByClassName("sidebar"); 
+	            for(var j = 0; j < i.length; j++) { 
+	                //i[j].style.marginTop += '30px';
+	                i[j].style.marginTop += divHeight;
+	                //console.log(i[j].style.marginTop);
+	            }; 
+	            //document.getElementById("paperworkView").style.marginTop += '30px'; 
+	            document.getElementById("paperworkView").style.marginTop += divHeight;
+	            document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += '5px'; 
+	            //document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += divHeight;
+	        };
+	        //toggle();
+	        var toggleOff = function() { 
+	            //var divHeight = document.getElementById("test").offsetHeight;
+	            var i = document.getElementsByClassName("sidebar"); 
+	            for(var j = 0; j < i.length; j++) { 
+	                i[j].style.marginTop -= '30px';
+	                //i[j].style.marginTop += divHeight;
+	            }; 
+	            document.getElementById("paperworkView").style.marginTop -= '30px'; 
+	            //document.getElementById("paperworkView").style.marginTop += divHeight;
+	            document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop -= '35px'; 
+	            //document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += divHeight;
+	        };
+	        setTimeout(function() {
+	            console.log("fired");
+	            //document.getElementById("test").parentNode.removeChild(document.getElementById("test"));
+	        }, 15000);
+	    //};
 	</script>
 	<div class="row">
-	    <div style="text-align:center;background-color:red;color:#FFFFFF;height:30px;">
+	    <div id="test" style="text-align:center;background-color:red;color:#FFFFFF;position:fixed;width:100%;z-index:1;">
 	        <p>This is an error message. </p>
 	    </div>
         <div class="fa sidebar-collapse-switch" ng-show="!expandedNoteLayout"
