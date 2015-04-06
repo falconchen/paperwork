@@ -8,42 +8,6 @@
 @include('modal/manageNotebooks')
 
 <div class="container-fluid">
-	<script type="text/javascript">
-	    //window.onload = function() {
-	        var toggleOn = function() { 
-	            var divHeight = document.getElementById("status_feedback").offsetHeight;
-	            //divHeight += "px";
-	            console.log(divHeight);
-	            var i = document.getElementsByClassName("sidebar"); 
-	            for(var j = 0; j < i.length; j++) { 
-	                //i[j].style.marginTop += '30px';
-	                i[j].style.marginTop += (divHeight + "px");
-	                //console.log(i[j].style.marginTop);
-	            }; 
-	            //document.getElementById("paperworkView").style.marginTop += '30px'; 
-	            document.getElementById("paperworkView").style.marginTop += (divHeight + "px");
-	            //document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += '5px'; 
-	            document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += (divHeight + 5 + "px");
-	        };
-	        //toggle();
-	        var toggleOff = function() { 
-	            //var divHeight = document.getElementById("test").offsetHeight;
-	            var i = document.getElementsByClassName("sidebar"); 
-	            for(var j = 0; j < i.length; j++) { 
-	                i[j].style.marginTop -= '30px';
-	                //i[j].style.marginTop += divHeight;
-	            }; 
-	            document.getElementById("paperworkView").style.marginTop -= '30px'; 
-	            //document.getElementById("paperworkView").style.marginTop += divHeight;
-	            document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop -= '35px'; 
-	            //document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += divHeight;
-	        };
-	        setTimeout(function() {
-	            console.log("fired");
-	            //document.getElementById("test").parentNode.removeChild(document.getElementById("test"));
-	        }, 15000);
-	    //};
-	</script>
 	<div class="row">
 	    <div id="status_feedback" class="request_status_feedback hidden">
 	        <p>This is an error message. <br><br><br>Hello again. </p>
