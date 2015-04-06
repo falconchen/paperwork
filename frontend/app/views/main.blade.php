@@ -8,31 +8,10 @@
 @include('modal/manageNotebooks')
 
 <div class="container-fluid">
-	<!--<div class="row" style="margin-bottom:10px;position:fixed;width:100%;height:30px;z-index:1">
-	    <div style="text-align:center;background-color:red;color:#FFFFFF;height:30px;">
-	        <p>This is an error message. </p>
-	    </div>
-	</div>-->
-	<style>
-	    .request_status_feedback {
-	        text-align: center;
-	        position: fixed;
-	        width: 100%;
-	        z-index: 1;
-	        padding: 10px 0;
-	        color: #FFFFFF;
-	    }
-	    .error_status_feedback {
-	        background-color: #FF5722;
-	    }
-	    .success_status_feedback {
-	        background-color: #259B24;
-	    }
-	</style>
 	<script type="text/javascript">
 	    //window.onload = function() {
 	        var toggleOn = function() { 
-	            var divHeight = document.getElementById("test").offsetHeight;
+	            var divHeight = document.getElementById("status_feedback").offsetHeight;
 	            //divHeight += "px";
 	            console.log(divHeight);
 	            var i = document.getElementsByClassName("sidebar"); 
@@ -66,7 +45,7 @@
 	    //};
 	</script>
 	<div class="row">
-	    <div id="test" class="request_status_feedback error_status_feedback">
+	    <div id="status_feedback" class="request_status_feedback error_status_feedback">
 	        <p>This is an error message. <br><br><br>Hello again. </p>
 	    </div>
         <div class="fa sidebar-collapse-switch" ng-show="!expandedNoteLayout"
