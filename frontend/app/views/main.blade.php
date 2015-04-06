@@ -45,7 +45,7 @@
 	    //};
 	</script>
 	<div class="row">
-	    <div id="status_feedback" class="request_status_feedback error_status_feedback">
+	    <div id="status_feedback" class="request_status_feedback hidden">
 	        <p>This is an error message. <br><br><br>Hello again. </p>
 	    </div>
         <div class="fa sidebar-collapse-switch" ng-show="!expandedNoteLayout"
