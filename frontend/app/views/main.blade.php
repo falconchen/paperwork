@@ -13,22 +13,38 @@
 	        <p>This is an error message. </p>
 	    </div>
 	</div>-->
+	<style>
+	    .request_status_feedback {
+	        text-align: center;
+	        position: fixed;
+	        width: 100%;
+	        z-index: 1;
+	        padding: 10px 0;
+	        color: #FFFFFF;
+	    }
+	    .error_status_feedback {
+	        background-color: #FF5722;
+	    }
+	    .success_status_feedback {
+	        background-color: #259B24;
+	    }
+	</style>
 	<script type="text/javascript">
 	    //window.onload = function() {
 	        var toggleOn = function() { 
 	            var divHeight = document.getElementById("test").offsetHeight;
-	            divHeight += "px";
+	            //divHeight += "px";
 	            console.log(divHeight);
 	            var i = document.getElementsByClassName("sidebar"); 
 	            for(var j = 0; j < i.length; j++) { 
 	                //i[j].style.marginTop += '30px';
-	                i[j].style.marginTop += divHeight;
+	                i[j].style.marginTop += (divHeight + "px");
 	                //console.log(i[j].style.marginTop);
 	            }; 
 	            //document.getElementById("paperworkView").style.marginTop += '30px'; 
-	            document.getElementById("paperworkView").style.marginTop += divHeight;
-	            document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += '5px'; 
-	            //document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += divHeight;
+	            document.getElementById("paperworkView").style.marginTop += (divHeight + "px");
+	            //document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += '5px'; 
+	            document.getElementsByClassName("sidebar-collapse-switch")[0].style.marginTop += (divHeight + 5 + "px");
 	        };
 	        //toggle();
 	        var toggleOff = function() { 
@@ -50,7 +66,7 @@
 	    //};
 	</script>
 	<div class="row">
-	    <div id="test" style="text-align:center;background-color:red;color:#FFFFFF;position:fixed;width:100%;z-index:1;padding:10px 0">
+	    <div id="test" class="request_status_feedback error_status_feedback">
 	        <p>This is an error message. <br><br><br>Hello again. </p>
 	    </div>
         <div class="fa sidebar-collapse-switch" ng-show="!expandedNoteLayout"
