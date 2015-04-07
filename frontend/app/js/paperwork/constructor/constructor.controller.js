@@ -1,5 +1,5 @@
 angular.module('paperworkNotes').controller('ConstructorController',
-  function($scope, $rootScope, $location, $routeParams, NetService, paperworkDbAllId) {
+  function($scope, $rootScope, $location, $routeParams, NetService, paperworkDbAllId, StatusNotifications) {
     if($rootScope.initDone) {
       return;
     }
@@ -155,5 +155,8 @@ angular.module('paperworkNotes').controller('ConstructorController',
       };
     };
     
-    $rootScope.sendStatusFeedback("success", "Seventh message");// call function as test
+    //$rootScope.sendStatusFeedback("success", "Seventh message");// call function as 
+    
+    StatusNotifications.sendStatusFeedback("success", "First message from service");
+    
   });
